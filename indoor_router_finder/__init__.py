@@ -33,3 +33,13 @@ def read_and_preprocess_graphml(input_graphml_file: str) -> str:
                 graph.append(new_edge)
                 break
     return etree.tostring(e, encoding='unicode')
+
+
+def preprocess_controls(control_string: str) -> list:
+    """
+    Splits the input control string into a list
+
+    :param control_string:
+    :return:
+    """
+    return control_string.split(',')

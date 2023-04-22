@@ -2,7 +2,7 @@
 
 import argparse
 
-from indoor_router_finder import read_and_preprocess_graphml
+from indoor_router_finder import read_and_preprocess_graphml, preprocess_controls
 
 
 def get_parsed_arguments():
@@ -50,3 +50,4 @@ def get_parsed_arguments():
 if __name__ == '__main__':
     args = get_parsed_arguments()
     adjusted_graphml_string = read_and_preprocess_graphml(args.node_graph)
+    course_control_list = preprocess_controls(args.control_list)
