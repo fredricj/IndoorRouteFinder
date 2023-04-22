@@ -52,4 +52,4 @@ if __name__ == '__main__':
     adjusted_graphml_string = read_and_preprocess_graphml(args.node_graph)
     course_control_list = preprocess_controls(args.control_list)
     route_calculator = RouteCalculator(adjusted_graphml_string)
-    route_calculator.calc_paths(course_control_list, args.max_routes)
+    route_calculator.calc_paths(course_control_list, args.max_routes, args.map_image, args.output_directory)
