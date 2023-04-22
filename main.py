@@ -2,6 +2,8 @@
 
 import argparse
 
+from indoor_router_finder import read_and_preprocess_graphml
+
 
 def get_parsed_arguments():
     parser = argparse.ArgumentParser(
@@ -47,3 +49,4 @@ def get_parsed_arguments():
 
 if __name__ == '__main__':
     args = get_parsed_arguments()
+    adjusted_graphml_string = read_and_preprocess_graphml(args.node_graph)
